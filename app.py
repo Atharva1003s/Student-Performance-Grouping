@@ -175,7 +175,7 @@ def run_clustering_pipeline():
     a_sil = silhouette_score(scaled_df, original_df["Agg_Cluster"])
 
     # Correlation matrix (on encoded df)
-    corr_matrix = df.corr()
+    corr_matrix = df.corr(numeric_only=True)
 
     return {
         "df": original_df,
